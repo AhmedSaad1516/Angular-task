@@ -1,0 +1,160 @@
+<main id="main">
+  <div class="container mt-5">
+      <section id="form">
+<div class="row justify-content-center mb-5">
+  <div class="col-lg-3 mb-lg-0 mb-10 text-center info">
+      <i class="myIcon fa-solid fa-rectangle-list cinfo"></i>
+      <p>{{'form.Detailswork' |translate}}</p>
+  </div>
+  <div class="col-lg-3 mb-lg-0 mb-10 text-center info">
+      <i class="myIcon fa-solid fa-magnifying-glass cinfo"></i>
+      <p>{{'form.Importance' |translate}}</p>
+  </div>
+  <div class="col-lg-3 mb-lg-0 mb-3 text-center">
+      <i class="myIcon fa-solid fa-shield"></i>
+      <p>{{'form.Detailsbusiness' |translate}}</p>
+  </div>
+</div>
+</section>
+</div>
+</main>
+<div class="form-container">
+  <header class="form-header">
+    <div class="icon">
+      <span>{{ 'header.approvalForm' | translate }}</span>
+      <img src="assets/images/logo2.png" alt="Approval Icon">
+    </div>
+  </header>
+  <hr>
+
+  <div class="form-description-container">
+    <p class="form-description">{{ 'description.enterDetails' | translate }}</p>
+  </div>
+
+
+  <app-skeleton-loader-line ></app-skeleton-loader-line>
+
+  <form class="myform" [formGroup]="formSubmittedValue">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="author">{{ 'form.author' | translate }}*</label>
+
+        <div  class="select form-control">
+          <mat-label >{{ 'form.author' | translate }}</mat-label>
+          <mat-select  formControlName="author" name="author">
+            <mat-option *ngFor="let author of showDataAuthor" [value]="author.name">
+              {{ author.name }}
+            </mat-option>
+          </mat-select>
+
+        </div>
+        <mat-error *ngIf="formSubmittedValue.get('author')?.hasError('required') && formSubmittedValue.get('author')?.touched">
+          {{ 'form.requiredField' | translate }}
+        </mat-error>
+      </div>
+
+      <div class="form-group">
+        <label for="reviewer">{{ 'form.reviewer' | translate }}*</label>
+        <div  class="select form-control">
+
+          <mat-label>{{ 'form.reviewer' | translate }}</mat-label>
+          <mat-select [(ngModel)]="selectedReviewer" formControlName="reviewer" name="reviewer">
+            <mat-option *ngFor="let reviewer of showDataReviewer" [value]="reviewer.name">
+              {{ reviewer.name }}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf="formSubmittedValue.get('reviewer')?.hasError('required') && formSubmittedValue.get('reviewer')?.touched">
+            {{ 'form.requiredField' | translate }}
+          </mat-error>
+      </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="status">{{ 'form.status' | translate }}*</label>
+        <div  class="select form-control">
+
+          <mat-label>{{ 'form.status' | translate }}</mat-label>
+          <mat-select [(ngModel)]="selectedStatus" formControlName="status" name="status">
+            <mat-option *ngFor="let status of status" [value]="status.name">
+              {{ status.name }}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf="formSubmittedValue.get('status')?.hasError('required') && formSubmittedValue.get('status')?.touched">
+            {{ 'form.requiredField' | translate }}
+          </mat-error>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="agreed">{{ 'form.agreed' | translate }}*</label>
+        <div  class="select form-control">
+
+          <mat-label>{{ 'form.agreed' | translate }}</mat-label>
+          <mat-select [(ngModel)]="selectedAgreed" formControlName="agreed" name="agreed">
+            <mat-option *ngFor="let agreed of showDataAgreed" [value]="agreed.name">
+              {{ agreed.name }}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf="formSubmittedValue.get('agreed')?.hasError('required') && formSubmittedValue.get('agreed')?.touched">
+            {{ 'form.requiredField' | translate }}
+          </mat-error>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <mat-form-field class="example-form-field">
+          <mat-label>{{ 'form.startDate' | translate }}</mat-label>
+          <input formControlName="start_date" matInput [(ngModel)]="startDate" [matDatepicker]="datepicker" placeholder="{{ 'form.startDate' | translate }}" name="startDate">
+          <mat-datepicker-toggle matIconSuffix [for]="datepicker"></mat-datepicker-toggle>
+          <mat-datepicker #datepicker></mat-datepicker>
+          <mat-error *ngIf="formSubmittedValue.get('start_date')?.hasError('required') && formSubmittedValue.get('start_date')?.touched">
+            {{ 'form.requiredField' | translate }}
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <mat-form-field class="example-form-field">
+          <mat-label>{{ 'form.endDate' | translate }}</mat-label>
+          <input formControlName="end_date" matInput [(ngModel)]="endDate" [matDatepicker]="datepickers" placeholder="{{ 'form.endDate' | translate }}" name="endDate">
+          <mat-datepicker-toggle matIconSuffix [for]="datepickers"></mat-datepicker-toggle>
+          <mat-datepicker #datepickers></mat-datepicker>
+          <mat-error *ngIf="formSubmittedValue.get('end_date')?.hasError('required') && formSubmittedValue.get('end_date')?.touched">
+            {{ 'form.requiredField' | translate }}
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="button-container">
+      <div class="right-button">
+        <button
+          (click)="SendDate()"
+          class="save-button"
+          mat-raised-button
+          color="primary"
+          [disabled]="isLoading">{{ 'form.save' | translate }}
+        </button>
+      </div>
+      <div class="left-buttons">
+        <button
+          (click)="saveAsDraft()"
+          class="draft-button"
+          type="button"
+          [disabled]="isLoading">{{ 'form.saveDraft' | translate }}
+        </button>
+        <button
+          (click)="deleteConfirmation()"
+          class="cancel-button"
+          type="button"
+          [disabled]="isLoading">{{ 'form.cancel' | translate }}
+        </button>
+      </div>
+    </div>
+
+  </form>
+</div>

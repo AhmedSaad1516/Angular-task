@@ -1,0 +1,10 @@
+
+<app-translate></app-translate>
+<app-form-main
+
+  [showDataAuthor]="authors"
+  [showDataReviewer]="reviewers"
+  [showDataAgreed]="agreed"
+  [status]="statusOptions"
+  (formSubmitted)="finishFormSubmission($event)">
+</app-form-main>

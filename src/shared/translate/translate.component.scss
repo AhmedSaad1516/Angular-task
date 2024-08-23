@@ -1,0 +1,124 @@
+$color_1: #fff;
+$color_2: #1b7ae2;
+$color_3: blue;
+$color_4: red;
+$background-color_1: #1b7ae2;
+$background-color_2: #f9f9f9;
+$background-color_3: #fff;
+$background-color_4: #f0f0f0;
+$border-color_1: #1b7ae2;
+$background-color_translate: transparent;
+
+.btn-primary {
+	color: $color_1;
+	background-color: $background-color_1 !important;
+	border-color: $border-color_1 !important;
+}
+a {
+	color: $color_2 !important;
+}
+h1 {
+	color: $color_3;
+}
+.req {
+	color: $color_4 !important;
+	font-size: 18px;
+}
+.custom-select {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	max-width: 250px;
+	select {
+		display: none;
+	}
+	.select-trigger {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		cursor: pointer;
+		padding: 10px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		background-color: $background-color_2;
+	}
+	.arrow-icon {
+		margin-left: 10px;
+	}
+	.options-container {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		border: 1px solid #ccc;
+		border-top: none;
+		border-radius: 0 0 5px 5px;
+		background-color: $background-color_3;
+		max-height: 150px;
+		overflow-y: auto;
+		z-index: 9999;
+	}
+	.option {
+		padding: 10px;
+		cursor: pointer;
+		&:hover {
+			background-color: $background-color_4;
+		}
+	}
+}
+.mat-mdc-progress-spinner {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+}
+.lang-sec {
+	img {
+		width: 24px;
+	}
+}
+.lang-mob-sec {
+	position: fixed;
+	left: 89%;
+	top: 81%;
+	border-radius: 100px;
+	background: #1a4681;
+	padding: 12px;
+	width: auto;
+	z-index: 99;
+}
+.loading {
+	pointer-events: none;
+}
+@media only screen and (max-width: 680px) {
+	.lang-mob-sec {
+		position: fixed;
+		left: 80%;
+		top: 81%;
+		border-radius: 100px;
+		background: #1a4681;
+		padding: 12px;
+		width: auto;
+		z-index: 99;
+	}
+}
+.lang-sec {
+	top: 21px;
+	background: rgb(26, 70, 129);
+	width: 120px;
+	border-radius: 25px;
+	padding: 10px 0px;
+}
+.lang-button {
+	width: 45%;
+	background-color: $background-color_translate;
+	border: none;
+	direction: ltr;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	gap: 8px;
+	text-transform: capitalize;
+}
+.lang-label {
+	color: $color_1;
+}

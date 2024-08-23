@@ -1,0 +1,69 @@
+{
+  "form": {
+    "author": "Author",
+    "reviewer": "Reviewer",
+    "agreed": "Agreed",
+    "status": "Status",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "save": "Save",
+    "saveDraft": "Save as Draft",
+    "cancel": "Cancel",
+    "requiredField": "This field is required",
+    "Detailswork":"Details work details",
+    "Importance":"Importance criteria for business analysis",
+    "Detailsbusiness":"Details work details"
+  },
+  "header": {
+    "approvalForm": "Approval Form"
+  },
+  "description": {
+    "enterDetails": "Please enter the details of the approval form"
+  },
+  "sweetAlert": {
+    "formSuccess": {
+      "title": "Data Sent",
+      "text": "Your form data has been successfully submitted.",
+      "confirmButtonText": "Confirm"
+    },
+    "formInvalid": {
+      "title": "Error",
+      "text": "Please complete all required fields."
+    },
+    "formDraftSave": {
+      "title": "There is an error",
+      "text": "Please fill in at least one field"
+    },
+    "formDraft": {
+      "title": "Draft saved",
+      "text": "Your form data has been saved as a draft.",
+      "confirmButtonText": "Confirm"
+    },
+    "confirmation": {
+      "title": "Do you want to cancel?",
+      "text": "You have unsaved data on the page, if you continue it will not be saved.",
+      "confirmButtonText": "Confirm",
+      "denyButtonText": "Cancel"
+    },
+    "confirmationValid": {
+      "title": "Ooops...",
+      "text": "There is no specific data so you can delete it",
+      "confirmButtonText": "Confirm"
+    }
+  },
+  "menu": {
+    "home": "Home",
+    "plans": "Plans",
+    "operations": "Operations",
+    "consentForm": "Business Impact Analysis",
+    "risks": "Risks",
+    "organizationData": "Organization Data",
+    "users": "Users",
+    "reports": "Reports",
+    "audits": "Audits",
+    "awarenessTraining": "Awareness & Training",
+    "notifications": "Notifications",
+    "taskManagement": "Task Management",
+    "settings": "Settings"
+  }
+}

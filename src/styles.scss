@@ -1,0 +1,142 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.info,
+.cinfo {
+  position: relative;
+}
+
+[dir="ltr"] .info::after,
+[dir="rtl"] .info::after {
+  content: "";
+  width: 100px;
+  height: 5px;
+  background-color: #5C008D;
+  position: absolute;
+  top: 35%;
+}
+
+[dir="ltr"] .info::before,
+[dir="rtl"] .info::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #5C008D;
+  position: absolute;
+  top: 30%;
+  z-index: 20;
+}
+
+[dir="rtl"] .cinfo::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #5C008D;
+  position: absolute;
+  top: 44%;
+  z-index: 20;
+}
+[dir="ltr"] .cinfo::after{
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #5C008D;
+  position: absolute;
+  top: 51%;
+  right: 5px;
+  z-index: 20;
+}
+[dir="ltr"] .info::after {
+  left: 80%;
+}
+
+[dir="ltr"] .info::before {
+  left: 80%;
+}
+
+[dir="ltr"] .cinfo::after {
+  left: 298%;
+}
+
+[dir="rtl"] .info::after {
+  right: 80%;
+}
+
+[dir="rtl"] .info::before {
+  right: 80%;
+}
+
+[dir="rtl"] .cinfo::after {
+  right: 298%;
+}
+
+@media (max-width: 992.5px) {
+  [dir="ltr"] .info::after,
+  [dir="rtl"] .info::after {
+    width: 5px;
+    height: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+  }
+
+  [dir="ltr"] .info::before,
+  [dir="rtl"] .info::before {
+    left: 49%;
+    top: 100%;
+  }
+
+  [dir="ltr"] .cinfo::after,
+  [dir="rtl"] .cinfo::after {
+    left: 40%;
+    top: 200px;
+  }
+}
+
+@media (max-width: 768.5px) {
+  [dir="ltr"] .info::before,
+  [dir="rtl"] .info::before {
+    left: 48.8%;
+    top: 99%;
+  }
+}
+
+@media (max-width: 500.5px) {
+  [dir="ltr"] .info::before,
+  [dir="rtl"] .info::before {
+    left: 48.6%;
+  }
+}
+
+@media (max-width: 414.5px) {
+  [dir="ltr"] .info::before,
+  [dir="rtl"] .info::before {
+    left: 48.4%;
+  }
+}
+
+@media (max-width: 366.5px) {
+  [dir="ltr"] .info::before,
+  [dir="rtl"] .info::before {
+    left: 48.2%;
+  }
+}
+
+@media (max-width: 316.5px) {
+  [dir="ltr"] .info::before,
+  [dir="rtl"] .info::before {
+    left: 48%;
+  }
+}
+.mat-mdc-select-arrow {
+  width: 10px;
+  height: 5px;
+  position: relative;
+  color: var(--mat-select-enabled-arrow-color);
+  bottom: 22px;
+}

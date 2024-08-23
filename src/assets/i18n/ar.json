@@ -1,0 +1,71 @@
+{
+  "form": {
+    "author": "المؤلف",
+    "reviewer": "المراجع",
+    "agreed": "الوافق",
+    "status": "الحالة",
+    "startDate": "تاريخ البدء",
+    "endDate": "تاريخ الانتهاء",
+    "save": "حفظ",
+    "saveDraft": "حفظ كمسودة",
+    "cancel": "الغاء",
+    "requiredField": "هذا الحقل مطلوب",
+    "Detailswork":"تفاصيل تفاصيل عمل",
+    "Importance":"معايير الأهمية لتحليل اثر الاعمال",
+    "Detailsbusiness":"تفاصيل تحليل اثر الاعمال"
+
+
+  },
+  "header": {
+    "approvalForm": "استمارة الموافقة"
+  },
+  "description": {
+    "enterDetails": "قم بإدخال تفاصيل استمارة الموافقة"
+  },
+  "sweetAlert": {
+    "formSuccess": {
+      "title": "تم ارسال البيانات",
+      "text": "تم ارسال بيانات النموذج الخاص بك بنجاح",
+      "confirmButtonText": "تأكيد"
+    },
+    "formInvalid": {
+      "title": "هناك خطأ",
+      "text": "برجاء اخال البيانات كاملا"
+    },
+    "formDraftSave": {
+      "title": "هناك خطأ",
+      "text": "برجاء ادخال حقل واحد على الأقل"
+    },
+    "formDraft": {
+      "title": "تم حفظ المسودة",
+      "text": "تم حفظ بيانات النموذج الخاص بك كمسودة.",
+      "confirmButtonText": "تأكيد"
+    },
+    "confirmation": {
+      "title": "هل تريد الإلغاء",
+      "text": "لديك بيانات غير محفوظة في الصفحة إذا تابعت فلن يتم حفظها",
+      "confirmButtonText": "تأكيد",
+      "denyButtonText": "إلغاء"
+    },
+    "confirmationValid": {
+      "title": "هناك خطأ",
+      "text": "لا توجد بيانات محددة حتى تتمكن من حذفها",
+      "confirmButtonText": "تأكيد"
+    }
+  },
+  "menu": {
+    "home": "الرئيسية",
+    "plans": "الخطط",
+    "operations": "العمليات",
+    "consentForm": "تحليل اثر الاعمال",
+    "risks": "المخاطر",
+    "organizationData": "بيانات المؤسسة",
+    "users": "المستخدمين",
+    "reports": "التقارير",
+    "audits": "الإشتبانات",
+    "awarenessTraining": "التوعية و التدريب",
+    "notifications": "البلاغات",
+    "taskManagement": "إدارة المهام",
+    "settings": "الإعدادات"
+  }
+}

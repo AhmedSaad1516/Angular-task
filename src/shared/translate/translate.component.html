@@ -1,0 +1,34 @@
+<div
+  [ngStyle]="{
+    'left.px': lang === 'en' ? 100 : 'auto',
+    'right.px': lang === 'ar' ? 100 : 'auto'
+  }"
+  class="lang-sec d-xl-block d-none position-relative z-index-1"
+  *ngIf="lang === 'en' || lang === 'ar'"
+>
+  <button
+    mat-icon-button
+    [matMenuTriggerFor]="menu"
+    aria-label="Language Menu"
+    class="lang-button"
+  >
+    <img
+      [style.margin-left.px]="lang === 'ar' ? -56 : -8"
+      src="assets/icon/keyboard_arrow_down-white.svg"
+    />
+    <span class="lang-label">{{ lang === 'ar' ? 'Ar' : 'En' }}</span>
+    <img src="assets/icon/public.svg"/>
+  </button>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="changeLanguage()">
+      <span>
+        {{ lang === 'en' ? 'ar' : 'en' }}
+        <i
+          *ngIf="lang === 'ar'"
+          class="fi fi-us fis rounded-circle me-1 fs-3"
+        ></i>
+      </span>
+    </button>
+  </mat-menu>
+</div>

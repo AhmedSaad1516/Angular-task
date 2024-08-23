@@ -1,0 +1,65 @@
+<div class="row">
+
+  <div class="col-md-3">
+    <div class="sidebar">
+      <div class="logo-container">
+        <i class="fas fa-bars menu-icon"></i>
+        <div class="logo">
+          <img src="assets/images/logo.png" alt="Mustamir Logo" />
+        </div>
+      </div>
+      <ul class="menu-list">
+
+         <a routerLink="/home">
+          <li routerLinkActive="selected" class="menu-item">
+          <i class="fas fa-home"></i> {{ 'menu.home' | translate }}
+        </li>
+        </a>
+
+        <li class="menu-item">
+          <i class="fas fa-project-diagram"></i> الخطط
+        </li>
+        <li class="menu-item">
+          <i class="fas fa-cogs"></i> العمليات
+        </li>
+        <li routerLinkActive="selected" class="menu-item ">
+           <a routerLinkActive="selected" routerLink="/consent-form" >
+            <i class="fas fa-briefcase"></i> تحليل اثر الاعمال
+           </a>
+        </li>
+        <li class="menu-item">
+          <i class="fas fa-exclamation-triangle"></i> المخاطر
+        </li>
+        <li class="menu-item">
+          <i class="fas fa-database"></i> بيانات المؤسسة
+        </li>
+        <li class="menu-item">
+          <i class="fas fa-users"></i> المستخدمين
+        </li>
+        <li class="menu-item">
+          <i class="fas fa-file-alt"></i> التقارير
+        </li>
+        <li class="menu-item">
+          <i class="fas fa-clock"></i> الإشتبانات
+        </li>
+        <li class="menu-item">
+          <i class="fas fa-globe"></i> التوعية و التدريب
+        </li>
+        <li class="menu-item">
+          <i class="fas fa-bullhorn"></i> البلاغات
+        </li>
+        <li class="menu-item">
+          <i class="fas fa-tasks"></i> إدارة المهام
+        </li>
+        <li class="menu-item">
+          <i class="fas fa-cog"></i> الإعدادات
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+ <div class="col-md-9">
+  <router-outlet></router-outlet>
+ </div>
+</div>
